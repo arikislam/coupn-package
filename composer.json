@@ -1,6 +1,6 @@
 {
     "name": "smariqislam/coupon",
-    "description": "This will generate coupons",
+    "description": "This will manage coupons",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -15,7 +15,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^9.11"
+    },
     "extra": {
         "laravel": {
             "providers": [
