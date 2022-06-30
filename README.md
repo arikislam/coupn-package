@@ -6,7 +6,6 @@ This package will manage coupons and also create api routes to manage coupons.
 
 ## Requirements
 - - - -
-Require `fruitcake/php-cors` using composer.
 
 This package can only use as a library. You can use it in your laravel framework using version 9 and above
 
