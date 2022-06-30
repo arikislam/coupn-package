@@ -84,7 +84,7 @@ class CouponService
         $query = Coupon::query()->with('productCategory');
         if (!blank($keyword)) {
             $query->where(function ($q) use ($keyword) {
-                $q->where('label', 'like', '%' . $keyword . '%')->orWhere('code', 'like', '%', $keyword . '%');
+                $q->where('label', 'like', '%' . $keyword . '%')->orWhere('code', 'like', '%'. $keyword . '%');
             });
         }
 
