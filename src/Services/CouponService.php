@@ -108,7 +108,7 @@ class CouponService
             'coupon_applied_on'   => ['required', Rule::in($this->getCouponAppliedOnValues())],
             'discount_type'       => ['required', Rule::in($this->getCouponDiscountTypeValues())],
             'product_category_id' => Rule::requiredIf($request->get('coupon_applied_on') == self::COUPON_APPLIED_ON_PRODUCT_CATEGORIES),
-            'discount_amount'     => 'required|numeric',
+            'discount_amount'     => 'required|numeric|min:1',
             'products'            => ['array', Rule::requiredIf($request->get('coupon_applied_on') == self::COUPON_APPLIED_ON_PRODUCTS)],
             'expire_date'         => 'required|date|after:today',
             'status'              => 'required|boolean',
