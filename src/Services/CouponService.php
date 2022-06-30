@@ -166,7 +166,7 @@ class CouponService
             return false;
         }
 
-        if (blank($coupon->products->where(config('coupon.product_primary_key'), $productId)->first())) {
+        if (blank($coupon->product_category_id) && blank($coupon->products->where(config('coupon.product_primary_key'), $productId)->first())) {
             return false;
         }
 
